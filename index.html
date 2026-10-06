@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comidas Argentinas</title> 
-    <link rel="stylesheet" href="style.css"> 
+    <title>Comidas Argentinas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-      <!-- Para filtros y navegacion -->
+        <!-- Para filtros y navegacion -->
     </header>
 
     <main class="comida-container" id="comidaContainer">
         <!-- Contenido Dinamico -->
-    </main>     
+    </main>
 
     <section class="addFood">
-     <form id="addFoodForm">
+        <form id="addFoodForm">
 
-      <label>Nombre de la comida</label>
-      <input type="text" name="nombre" placeholder="Nombre de la comida">
+            <h2>Agregar Comida</h2>
 
-      <label>Tipo de comida</label>
-      <input type="text" placeholder="Tipo de comida">
+            <label>Nombre de la comida</label>
+            <input type="text" name="nombre" placeholder="Nombre de la comida" required>
 
-      <label>Provincia de la comida</label>
-      <input type="text" placeholder="Provincia de la comida">
+            <label>Tipo de comida</label>
+            <input type="text" name="categoria" placeholder="Tipo de comida">
 
-      <button type="submit">Agregar Comida</button>
+            <label>Provincia de la comida</label>
+            <input type="text" name="provincia" placeholder="Provincia de la comida">
 
-     </form>
+            <button type="submit" id="boton-agregar">Agregar Comida</button>
+
+        </form>
     </section>
 
     <script type="module" src="./main.js"></script>
 </body>
+
 </html>

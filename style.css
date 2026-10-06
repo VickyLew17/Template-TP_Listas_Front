@@ -1,18 +1,20 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .comida-container {
   display: grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
 }
 
-.card{
-  background-color: #d6d6d6;
+.card {
+  background-color: #ffffff;
   border: .2rem solid #1e135c;
   border-radius: 12px;
   padding: 20px;
@@ -21,9 +23,21 @@
   gap: 8px;
 }
 
+.categoria {
+  color: #1e135c;
+  font-weight: 750;
+  font-size: 1rem;
+}
+
+.provincia{
+  color: #333333;
+  font-size: .9rem;
+  margin-top: -5px;
+}
+
 .addFood {
   max-width: 500px;
-  margin: 40px auto; 
+  margin: 40px auto;
   padding: 0 20px;
 }
 
@@ -39,10 +53,34 @@
 }
 
 #addFoodForm label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #333333;
-  margin-bottom: -6px; 
+  margin-bottom: -6px;
 }
 
+#addFoodForm h2 {
+  color: #1e135c;
+  font-size: 2rem;
+}
 
+input {
+  padding: 8px;
+  border-radius: 10px;
+}
+
+#boton-agregar {
+  padding: 12px;
+  border: #1e135c solid .2rem;
+  background-color: #1e135c;
+  color: #ffeacb;
+  border-radius: 24px;
+
+  font-size: 1.2rem;
+}
+
+#boton-agregar:hover {
+  background-color: #14075c;
+  border-color: #14075c;
+  transform: translateY(2px);
+}

@@ -81,16 +81,17 @@ const formComida = document.getElementById("addFoodForm");
 
 function mostrarComidas() {
 
-  container.innerHTML= "";
+  container.innerHTML = "";
 
-  comidas.forEach (comida => {
+  comidas.forEach(comida => {
 
-    container.innerHTML += 
-    `
+    container.innerHTML +=
+      `
       <article class="card">
-        <h2>${comida.nombre}</h2>
-        <p>${comida.provincia}</p>
         <span class="categoria">${comida.categoria}</span>
+        <h2 class="nombre-card">${comida.nombre}</h2>
+        <p class="provincia">${comida.provincia}</p>
+        
       </article>
     `;
   });
@@ -98,6 +99,21 @@ function mostrarComidas() {
 
 mostrarComidas();
 
-formComida.addEventListener("submit", (e) => {
-  alert("Comida nueva:" + e.target.nombre.value);
-})
+
+formComida.addEventListener("submit", (event) => {
+
+  event.preventDefault();
+
+  const nuevaComida = {
+    nombre: event.target.nombre.value,
+    categoria: event.target.categoria.value,
+    provincia: event.target.provincia.value
+  }
+
+  comidas.push(nuevaComida);
+
+  mostrarComidas();
+
+  formComida.reset(); 
+});
+
